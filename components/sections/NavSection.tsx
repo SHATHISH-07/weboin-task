@@ -44,7 +44,7 @@ const NavSection = () => {
       </nav>
 
       <div
-        className={`fixed top-0 left-0 z-40 flex h-screen w-full flex-col items-center justify-center bg-[#eaeaea] transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 z-40 flex h-screen w-full flex-col items-center justify-center bg-[#f3f0f0] transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
