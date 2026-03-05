@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const PortfolioSection = () => {
+  const sectionRef = useRef<HTMLElement | null>(null);
+
   const projects = [
     {
       id: 1,
@@ -46,12 +49,46 @@ const PortfolioSection = () => {
     },
   ];
 
+  const delays = [
+    "delay-300",
+    "delay-600",
+    "delay-900",
+    "delay-1200",
+    "delay-1500",
+  ];
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && sectionRef.current) {
+          const elements =
+            sectionRef.current.querySelectorAll(".animate-fade-up");
+
+          elements.forEach((el: Element) => {
+            el.classList.add("show");
+          });
+
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 },
+    );
+
+    observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="portfolio"
       className="w-full p-4 md:p-8 flex flex-col gap-8 md:gap-12 mt-10 scroll-mt-24"
     >
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-2">
+      {/* Title */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-2 animate-fade-up">
         <div>
           <h3 className="text-gray-500 uppercase tracking-widest text-xs md:text-sm font-bold mb-2">
             Our Portfolio
@@ -62,23 +99,24 @@ const PortfolioSection = () => {
         </div>
       </div>
 
+      {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-3">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <div
             key={project.id}
-            className={`relative w-full ${project.span} ${project.height} rounded-2xl md:rounded-3xl overflow-hidden group cursor-pointer`}
+            className={`relative w-full ${project.span} ${project.height} rounded-2xl md:rounded-3xl overflow-hidden group cursor-pointer animate-fade-up ${delays[index]}`}
           >
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
             />
 
             <div className="absolute inset-0 opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
 
             <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
-              <div className="flex items-end justify-between w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+              <div className="flex items-end justify-between w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                 <div className="flex flex-col gap-1 md:gap-2">
                   <span className="text-[#d4c03f] text-xs md:text-sm font-semibold uppercase tracking-widest">
                     {project.category}
@@ -88,21 +126,8 @@ const PortfolioSection = () => {
                   </h3>
                 </div>
 
-                <div className="shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] delay-75 shadow-xl">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-45 transition-transform duration-500"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                    />
-                  </svg>
+                <div className="shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-500 shadow-xl">
+                  →
                 </div>
               </div>
             </div>
