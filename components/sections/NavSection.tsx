@@ -8,12 +8,15 @@ const NavSection = () => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     }
 
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [isOpen]);
 
@@ -56,7 +59,7 @@ const NavSection = () => {
       </nav>
 
       <div
-        className={`fixed top-0 left-0 z-40 flex h-screen w-full flex-col items-center justify-center bg-[#f3f0f0] transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 z-40 flex h-[100dvh] w-full flex-col items-center justify-center bg-[#f3f0f0] transition-transform duration-500 ease-in-out overscroll-none touch-none ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >

@@ -99,13 +99,13 @@ public/
 Clone the repository:
 
 ```
-git clone https://github.com/yourusername/pixor-agency-site.git
+git clone https://github.com/SHATHISH-07/weboin-task
 ```
 
 Navigate to the project folder:
 
 ```
-cd pixor-agency-site
+cd weboin-task
 ```
 
 Install dependencies:
