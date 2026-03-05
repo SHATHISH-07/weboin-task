@@ -14,7 +14,7 @@ const NavSection = () => {
 
   return (
     <>
-      <nav className="sticky top-0 w-full z-50 flex items-center justify-between p-4 md:p-3 md:px-8  backdrop-blur-md bg-white/0">
+      <nav className="sticky top-0 w-full z-50 flex items-center justify-between p-4 md:p-3 md:px-8  backdrop-blur-md bg-white/0 opacity-0 animate-fade-in-nav">
         <h1 className="relative z-50 text-2xl md:text-3xl font-extrabold transition-colors duration-300 ease-in-out">
           Weboin
         </h1>

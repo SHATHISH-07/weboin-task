@@ -4,3 +4,38 @@ body {
   background-color: #ffffff;
   color: #0a0a0a;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-nav {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-hero-txt {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-fade-in-hero-para {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.animate-fade-in-marquee {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.animate-fade-in-reel {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1.8s;
+}
