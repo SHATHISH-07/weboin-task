@@ -208,8 +208,9 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center w-full border-y border-gray-300 py-2 gap-4 md:gap-8 opacity-0 animate-fade-in-marquee x">
-        <div className="relative flex flex-1 overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center w-full max-w-full border-y border-gray-300 py-2 gap-4 md:gap-8 opacity-0 animate-fade-in-marquee">
+        {/* ADDED min-w-0 and w-full here to fix the mobile scroll overflow issue */}
+        <div className="relative flex flex-1 w-full min-w-0 overflow-hidden">
           <div className="flex whitespace-nowrap animate-marquee items-center pl-4 md:pl-10">
             {companies.map((company, index) => (
               <span
@@ -236,7 +237,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="shrink-0 pr-2 md:pr-8 text-right border-l border-gray-200 pl-4 md:pl-8">
+        <div className="shrink-0 pr-2 md:pr-8 text-right md:border-l border-gray-200 pl-4 md:pl-8">
           <div className="text-lg sm:text-xl md:text-2xl font-black text-black">
             <span className="text-xs sm:text-sm">★ ★ ★ ★ ☆ </span>4.9/5
           </div>
@@ -305,8 +306,8 @@ const HeroSection = () => {
             {/* Call to Action Button */}
             <div className="mt-8 sm:mt-10">
               <a
-                href="#service"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-black text-sm sm:text-base font-bold rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(0,0,0,0.1)]"
+                href="#contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white border border-gray-200 text-black text-sm sm:text-base font-bold rounded-full hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-md"
               >
                 View Work
               </a>
