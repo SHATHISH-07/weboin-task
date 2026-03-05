@@ -1,5 +1,49 @@
 const Footer = () => {
-  return <div>Footer</div>;
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="w-full bg-[#0a0a0a] text-white py-2 px-5 md:px-10 ">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="text-3xl font-black tracking-tighter">
+          WEBOIN
+          <span className="text-gray-500 text-lg font-normal align-top ml-1">
+            ®
+          </span>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-medium text-gray-400">
+          <a
+            href="#home"
+            className="hover:text-white transition-colors duration-300"
+          >
+            Home
+          </a>
+          <a
+            href="#services"
+            className="hover:text-white transition-colors duration-300"
+          >
+            Services
+          </a>
+          <a
+            href="#portfolio"
+            className="hover:text-white transition-colors duration-300"
+          >
+            Work
+          </a>
+          <a
+            href="#contact"
+            className="hover:text-white transition-colors duration-300"
+          >
+            Contact
+          </a>
+        </div>
+
+        <div className="text-xs md:text-sm text-gray-600 font-medium">
+          &copy; {currentYear} Weboin. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

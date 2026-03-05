@@ -73,7 +73,7 @@ const NavSection = () => {
               onClick={toggleMenu}
               className="text-3xl font-bold  transition-colors duration-300 md:text-6xl hover:text-gray-600"
             >
-              Portfolio
+              Work
             </a>
           </li>
           <li className="my-6">

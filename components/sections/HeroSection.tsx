@@ -148,10 +148,12 @@ const HeroSection = () => {
         </p>
 
         <button className="mt-4 md:mt-8 px-6 py-3 md:px-8 md:py-4 bg-black text-white text-sm md:text-lg font-bold rounded-full hover:bg-gray-800 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-xl pointer-events-auto">
-          Get Started
-          <span className="group-hover/btn:translate-x-1 transition-transform duration-300">
-            →
-          </span>
+          <a href="#contact">
+            Get Started
+            <span className="group-hover/btn:translate-x-1 transition-transform duration-300">
+              →
+            </span>
+          </a>
         </button>
       </div>
     </div>,
