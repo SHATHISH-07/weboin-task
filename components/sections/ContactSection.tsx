@@ -97,7 +97,6 @@ const ContactSection = () => {
       id="contact"
       className="w-full bg-[#0a0a0a] dark:bg-white text-white dark:text-black py-12 px-5 md:px-10 rounded-t-3xl mt-10"
     >
-      {/* Title */}
       <div
         className={`w-full border-b border-neutral-800 pb-6 mb-8 transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
@@ -112,7 +111,6 @@ const ContactSection = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-        {/* LEFT SIDE */}
         <div className="flex flex-col gap-6">
           <p
             className={`text-lg md:text-xl text-gray-400 dark:text-gray-600 font-medium leading-relaxed max-w-md transition-all duration-700 delay-100 ${
@@ -154,7 +152,6 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* FORM */}
         <div className="w-full max-w-lg">
           <h3
             className={`text-lg font-bold mb-5 transition-all duration-700 delay-400 ${
@@ -217,6 +214,11 @@ const ContactSection = () => {
             >
               {isSubmitting ? "Sending..." : "Submit"}
             </button>
+            {isSuccess && (
+              <p className="text-green-500 font-medium mt-2 transition-opacity duration-500">
+                Message sent successfully!
+              </p>
+            )}
           </form>
         </div>
       </div>

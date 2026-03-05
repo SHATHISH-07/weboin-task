@@ -7,14 +7,12 @@ const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Avoid hydration mismatch by waiting until the component mounts
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
   if (!mounted) {
-    // Return a blank placeholder of the exact same size to prevent layout shift
     return <div className="w-10 h-10 md:w-12 md:h-12" />;
   }
 
@@ -25,7 +23,6 @@ const ThemeToggle = () => {
       aria-label="Toggle Dark Mode"
     >
       {theme === "dark" ? (
-        // Sun Icon (when in dark mode, click to go light)
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -41,7 +38,6 @@ const ThemeToggle = () => {
           />
         </svg>
       ) : (
-        // Moon Icon (when in light mode, click to go dark)
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

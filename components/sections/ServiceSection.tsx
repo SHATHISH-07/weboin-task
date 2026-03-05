@@ -162,7 +162,6 @@ const ServiceSection = () => {
         })}
       </div>
 
-      {/* WORD BY WORD TEXT */}
       <div
         ref={textRef}
         className="mb-10 flex flex-col items-center justify-center px-4"

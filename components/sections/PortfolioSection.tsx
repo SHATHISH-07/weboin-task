@@ -87,7 +87,6 @@ const PortfolioSection = () => {
       id="portfolio"
       className="w-full p-4 md:p-8 flex flex-col gap-8 md:gap-12 mt-10 scroll-mt-24"
     >
-      {/* Title */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-2 animate-fade-up">
         <div>
           <h3 className="text-gray-500 dark:text-gray-200 uppercase tracking-widest text-xs md:text-sm font-bold mb-2">
@@ -99,7 +98,6 @@ const PortfolioSection = () => {
         </div>
       </div>
 
-      {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-3">
         {projects.map((project, index) => (
           <div

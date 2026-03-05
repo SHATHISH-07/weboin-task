@@ -30,13 +30,12 @@ const NavSection = () => {
 
   return (
     <>
-      {/* CHANGED: 'sticky top-0 z-50' to 'fixed top-0 left-0 z-[100]' */}
-      <nav className="fixed top-0 left-0 w-full z-[100] flex items-center justify-between p-4 md:p-3 md:px-8 backdrop-blur-md bg-white/0 opacity-0 animate-fade-in-nav">
-        <h1 className="relative z-[100] text-2xl md:text-3xl font-extrabold text-black dark:text-white transition-colors duration-300 ease-in-out">
+      <nav className="fixed top-0 left-0 w-full z-100 flex items-center justify-between p-4 md:p-3 md:px-8 backdrop-blur-md bg-white/0 opacity-0 animate-fade-in-nav">
+        <h1 className="relative z-100 text-2xl md:text-3xl font-extrabold text-black dark:text-white transition-colors duration-300 ease-in-out">
           <a href="#home">Pixor</a>
         </h1>
 
-        <div className="flex items-center gap-3 md:gap-4 relative z-[100]">
+        <div className="flex items-center gap-3 md:gap-4 relative z-100">
           <ThemeToggle />
 
           <button
@@ -64,9 +63,8 @@ const NavSection = () => {
         </div>
       </nav>
 
-      {/* CHANGED: z-40 to z-[90] so it sits perfectly right under the fixed navbar */}
       <div
-        className={`fixed top-0 left-0 z-[90] flex h-[100dvh] w-full flex-col items-center justify-center bg-[#f3f0f0] dark:bg-[#0a0a0a] transition-transform duration-500 ease-in-out overscroll-none touch-none ${
+        className={`fixed top-0 left-0 z-90 flex h-dvh w-full flex-col items-center justify-center bg-[#f3f0f0] dark:bg-[#0a0a0a] transition-transform duration-500 ease-in-out overscroll-none touch-none ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >

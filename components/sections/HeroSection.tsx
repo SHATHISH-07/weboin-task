@@ -209,7 +209,6 @@ const HeroSection = () => {
       </div>
 
       <div className="flex flex-col md:flex-row items-center w-full max-w-full border-y border-gray-300 py-2 gap-4 md:gap-8 opacity-0 animate-fade-in-marquee">
-        {/* ADDED min-w-0 and w-full here to fix the mobile scroll overflow issue */}
         <div className="relative flex flex-1 w-full min-w-0 overflow-hidden">
           <div className="flex whitespace-nowrap animate-marquee items-center pl-4 md:pl-10">
             {companies.map((company, index) => (
@@ -292,18 +291,15 @@ const HeroSection = () => {
           </div>
 
           <div className="md:hidden relative w-full flex flex-col items-center justify-center text-center py-10 px-4 z-10">
-            {/* Eyebrow Pill */}
             <div className="mb-6 bg-black dark:bg-white rounded-2xl text-white dark:text-black font-bold tracking-normal p-3 px-5 w-fit mx-auto text-sm sm:text-base">
               We don&apos;t just build websites.
             </div>
 
-            {/* Main Headline */}
             <h2 className="text-3xl sm:text-4xl font-black text-black dark:text-white leading-tight">
               We craft immersive digital ecosystems designed to scale.
               Innovation meets execution.
             </h2>
 
-            {/* Call to Action Button */}
             <div className="mt-8 sm:mt-10">
               <a
                 href="#contact"
