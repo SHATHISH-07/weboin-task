@@ -41,7 +41,7 @@ const HeroSection = () => {
 
   const passages = [
     <span key="1" className="block w-full">
-      <span className="block mb-6 md:mb-10 bg-black rounded-2xl text-white font-bold tracking-normal p-3 md:p-4 w-fit mx-auto text-base sm:text-3xl md:text-6xl">
+      <span className="block mb-6 md:mb-10 bg-black dark:bg-white rounded-2xl text-white dark:text-black font-bold tracking-normal p-3 md:p-4 w-fit mx-auto text-base sm:text-3xl md:text-6xl">
         {words1.map((word, i) => (
           <span
             key={i}
@@ -57,7 +57,7 @@ const HeroSection = () => {
         ))}
       </span>
 
-      <span className="block text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-black leading-tight">
+      <span className="block text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-black dark:text-white xleading-tight">
         {words2.map((word, i) => (
           <span
             key={i}
@@ -121,12 +121,12 @@ const HeroSection = () => {
     </div>,
     <div
       key="3"
-      className="relative w-full h-full min-h-200 flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 text-center rounded-3xl overflow-hidden hero-bg-svg-p-2 "
+      className="relative w-full h-full min-h-200 flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 text-center rounded-3xl overflow-hidden hero-bg-svg-p-2"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,var(--tw-gradient-stops))] from-white/40 via-gray-300/20 to-transparent opacity-80 transition-opacity duration-700 group-hover:opacity-100 pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center gap-4 md:gap-6 max-w-4xl py-6">
-        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-black dark:text-white leading-tight tracking-tight">
           {words3.map((word, i) => (
             <span
               key={i}
@@ -142,12 +142,12 @@ const HeroSection = () => {
           ))}
         </h2>
 
-        <p className="text-sm sm:text-base md:text-2xl text-gray-700 font-medium max-w-2xl">
+        <p className="text-sm sm:text-base md:text-2xl text-gray-700 dark:text-gray-300 font-medium max-w-2xl">
           Let&apos;s turn your vision into an undeniable reality. Contact us
           today to start your journey with Weboin.
         </p>
 
-        <button className="mt-4 md:mt-8 px-6 py-3 md:px-8 md:py-4 bg-black text-white text-sm md:text-lg font-bold rounded-full hover:bg-gray-800 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-xl pointer-events-auto">
+        <button className="mt-4 md:mt-8 px-6 py-3 md:px-8 md:py-4 bg-black dark:bg-white text-white dark:text-black text-sm md:text-lg font-bold rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-xl pointer-events-auto">
           <a href="#contact">
             Get Started
             <span className="group-hover/btn:translate-x-1 transition-transform duration-300">
@@ -195,14 +195,14 @@ const HeroSection = () => {
   return (
     <div
       id="home"
-      className="min-h-screen p-4 sm:p-5 md:mt-10 flex flex-col gap-10 md:gap-12"
+      className="min-h-screen p-4 sm:p-5 mt-24 md:mt-22 flex flex-col gap-10 md:gap-12"
     >
       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 md:gap-8">
         <div className="text-5xl sm:text-7xl md:text-9xl lg:text-[15em] font-bold leading-none opacity-0 animate-fade-in-hero-txt tracking-tighter">
           PIXOR
         </div>
 
-        <div className="max-w-xs sm:max-w-sm md:max-w-md pb-2 md:pb-6 text-left lg:text-right text-[#757575] font-bold opacity-0 animate-fade-in-hero-para text-sm md:text-base">
+        <div className="max-w-xs sm:max-w-sm md:max-w-md pb-2 md:pb-6 text-left lg:text-right text-[#757575] dark:text-[#d1cfcf] font-bold opacity-0 animate-fade-in-hero-para text-sm md:text-base">
           We deliver UI/UX design, web development, branding, and marketing to
           build impactful digital experiences.
         </div>
@@ -238,10 +238,10 @@ const HeroSection = () => {
         </div>
 
         <div className="shrink-0 pr-2 md:pr-8 text-right md:border-l border-gray-200 pl-4 md:pl-8">
-          <div className="text-lg sm:text-xl md:text-2xl font-black text-black">
+          <div className="text-lg sm:text-xl md:text-2xl font-black text-black dark:text-white">
             <span className="text-xs sm:text-sm">★ ★ ★ ★ ☆ </span>4.9/5
           </div>
-          <div className="text-[10px] sm:text-xs md:text-sm font-semibold text-gray-500 mt-1">
+          <div className="text-[10px] sm:text-xs md:text-sm font-semibold text-gray-500 dark:text-gray-300 mt-1">
             Trusted by 100+ businesses
           </div>
         </div>
@@ -293,12 +293,12 @@ const HeroSection = () => {
 
           <div className="md:hidden relative w-full flex flex-col items-center justify-center text-center py-10 px-4 z-10">
             {/* Eyebrow Pill */}
-            <div className="mb-6 bg-black rounded-2xl text-white font-bold tracking-normal p-3 px-5 w-fit mx-auto text-sm sm:text-base">
+            <div className="mb-6 bg-black dark:bg-white rounded-2xl text-white dark:text-black font-bold tracking-normal p-3 px-5 w-fit mx-auto text-sm sm:text-base">
               We don&apos;t just build websites.
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-3xl sm:text-4xl font-black text-black leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-black dark:text-white leading-tight">
               We craft immersive digital ecosystems designed to scale.
               Innovation meets execution.
             </h2>

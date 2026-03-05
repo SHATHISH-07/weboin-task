@@ -90,10 +90,10 @@ const PortfolioSection = () => {
       {/* Title */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-2 animate-fade-up">
         <div>
-          <h3 className="text-gray-500 uppercase tracking-widest text-xs md:text-sm font-bold mb-2">
+          <h3 className="text-gray-500 dark:text-gray-200 uppercase tracking-widest text-xs md:text-sm font-bold mb-2">
             Our Portfolio
           </h3>
-          <h2 className="text-4xl md:text-6xl font-black text-black tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-black text-black dark:text-white tracking-tight">
             Selected works.
           </h2>
         </div>

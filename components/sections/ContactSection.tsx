@@ -95,7 +95,7 @@ const ContactSection = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="w-full bg-[#0a0a0a] text-white py-12 px-5 md:px-10 rounded-t-3xl mt-10"
+      className="w-full bg-[#0a0a0a] dark:bg-white text-white dark:text-black py-12 px-5 md:px-10 rounded-t-3xl mt-10"
     >
       {/* Title */}
       <div
@@ -105,7 +105,7 @@ const ContactSection = () => {
       >
         <h1 className="text-[16vw] md:text-[12vw] leading-none font-bold tracking-tighter">
           Pixor
-          <span className="text-gray-500 font-normal text-[6vw] md:text-[4vw] align-top">
+          <span className="text-gray-500 dark:text-gray-900 font-normal text-[6vw] md:text-[4vw] align-top">
             ®
           </span>
         </h1>
@@ -115,7 +115,7 @@ const ContactSection = () => {
         {/* LEFT SIDE */}
         <div className="flex flex-col gap-6">
           <p
-            className={`text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-md transition-all duration-700 delay-100 ${
+            className={`text-lg md:text-xl text-gray-400 dark:text-gray-600 font-medium leading-relaxed max-w-md transition-all duration-700 delay-100 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-12"
@@ -143,7 +143,7 @@ const ContactSection = () => {
 
             <a
               href="tel:+11234567890"
-              className={`text-base text-gray-400 hover:text-white transition-all duration-700 delay-300 ${
+              className={`text-base text-gray-400 dark:text-gray-700 hover:text-white dark:hover:text-black transition-all duration-700 delay-300 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"
@@ -173,7 +173,7 @@ const ContactSection = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Name"
-              className={`w-full bg-[#111] border border-neutral-800 rounded-xl px-4 py-3 text-white transition-all duration-700 delay-500 ${
+              className={`w-full bg-[#111] dark:bg-gray-200 border border-neutral-500 rounded-xl px-4 py-3 text-white dark:text-black transition-all duration-700 delay-500 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"
@@ -186,7 +186,7 @@ const ContactSection = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Email"
-              className={`w-full bg-[#111] border border-neutral-800 rounded-xl px-4 py-3 text-white transition-all duration-700 delay-600 ${
+              className={`w-full bg-[#111] dark:bg-gray-200 border border-neutral-500 rounded-xl px-4 py-3 text-white dark:text-black transition-all duration-700 delay-600 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"
@@ -199,7 +199,7 @@ const ContactSection = () => {
               onChange={handleChange}
               placeholder="Tell us about your project..."
               rows={3}
-              className={`w-full bg-[#111] border border-neutral-800 rounded-xl px-4 py-3 text-white resize-none transition-all duration-700 delay-700 ${
+              className={`w-full bg-[#111] dark:bg-gray-200 border border-neutral-500 rounded-xl px-4 py-3 text-white dark:text-black resize-none transition-all duration-700 delay-700 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"
@@ -209,7 +209,7 @@ const ContactSection = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full mt-1 px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all duration-700 delay-800 ${
+              className={`w-full mt-1 px-8 py-3 bg-white dark:bg-black text-black dark:text-white font-bold rounded-full hover:bg-gray-200 transition-all duration-700 delay-800 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"

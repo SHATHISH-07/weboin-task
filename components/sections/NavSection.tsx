@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const NavSection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,37 +30,43 @@ const NavSection = () => {
 
   return (
     <>
-      <nav className="sticky top-0 w-full z-50 flex items-center justify-between p-4 md:p-3 md:px-8 backdrop-blur-md bg-white/0 opacity-0 animate-fade-in-nav">
-        <h1 className="relative z-50 text-2xl md:text-3xl font-extrabold transition-colors duration-300 ease-in-out">
+      {/* CHANGED: 'sticky top-0 z-50' to 'fixed top-0 left-0 z-[100]' */}
+      <nav className="fixed top-0 left-0 w-full z-[100] flex items-center justify-between p-4 md:p-3 md:px-8 backdrop-blur-md bg-white/0 opacity-0 animate-fade-in-nav">
+        <h1 className="relative z-[100] text-2xl md:text-3xl font-extrabold text-black dark:text-white transition-colors duration-300 ease-in-out">
           <a href="#home">Pixor</a>
         </h1>
 
-        <button
-          className={`relative z-50 flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full shadow-md text-black transition-transform duration-700 ease-in-out border-none cursor-pointer focus:outline-none origin-center bg-white ${
-            isOpen ? "rotate-45" : "rotate-0"
-          }`}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 md:w-6 md:h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.5}
+        <div className="flex items-center gap-3 md:gap-4 relative z-[100]">
+          <ThemeToggle />
+
+          <button
+            className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full shadow-md bg-white dark:bg-neutral-900 text-black dark:text-white transition-transform duration-700 ease-in-out border-none cursor-pointer focus:outline-none origin-center ${
+              isOpen ? "rotate-45" : "rotate-0"
+            }`}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 4v16m8-8H4"
-            />
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5 md:w-6 md:h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
 
+      {/* CHANGED: z-40 to z-[90] so it sits perfectly right under the fixed navbar */}
       <div
-        className={`fixed top-0 left-0 z-40 flex h-[100dvh] w-full flex-col items-center justify-center bg-[#f3f0f0] transition-transform duration-500 ease-in-out overscroll-none touch-none ${
+        className={`fixed top-0 left-0 z-[90] flex h-[100dvh] w-full flex-col items-center justify-center bg-[#f3f0f0] dark:bg-[#0a0a0a] transition-transform duration-500 ease-in-out overscroll-none touch-none ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -68,7 +75,7 @@ const NavSection = () => {
             <a
               href="#home"
               onClick={toggleMenu}
-              className="text-black text-4xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
+              className="text-black dark:text-white text-4xl font-bold transition-colors duration-300 md:text-6xl dark:hover:text-gray-400 hover:text-gray-600"
             >
               Home
             </a>
@@ -77,7 +84,7 @@ const NavSection = () => {
             <a
               href="#services"
               onClick={toggleMenu}
-              className="text-black text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
+              className="text-black dark:text-white text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600 dark:hover:text-gray-400"
             >
               Services
             </a>
@@ -86,7 +93,7 @@ const NavSection = () => {
             <a
               href="#portfolio"
               onClick={toggleMenu}
-              className="text-black text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
+              className="text-black dark:text-white text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600 dark:hover:text-gray-400"
             >
               Work
             </a>
@@ -95,13 +102,15 @@ const NavSection = () => {
             <a
               href="#contact"
               onClick={toggleMenu}
-              className="text-black text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
+              className="text-black dark:text-white text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600 dark:hover:text-gray-400"
             >
               Contact
             </a>
           </li>
         </ul>
-        <span className="text-black font-medium mt-8">&copy; {year} Pixor</span>
+        <span className="text-black dark:text-white font-medium mt-8">
+          &copy; {year} Pixor
+        </span>
       </div>
     </>
   );

@@ -79,11 +79,11 @@ const ServiceSection = () => {
           showTitle ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}
       >
-        <h3 className="text-gray-500 uppercase tracking-widest text-xs md:text-sm font-bold mb-2">
+        <h3 className="text-gray-500 dark:text-gray-200 uppercase tracking-widest text-xs md:text-sm font-bold mb-2">
           Our Services
         </h3>
 
-        <h2 className="text-4xl md:text-6xl font-bold text-black tracking-tight">
+        <h2 className="text-4xl md:text-6xl font-bold text-black dark:text-white tracking-tight">
           What we provide.
         </h2>
       </div>
@@ -109,6 +109,7 @@ const ServiceSection = () => {
               <Image
                 src={service.image}
                 alt={service.title}
+                priority
                 fill
                 className={`object-cover transition-transform duration-1000 ease-out ${
                   isActive
