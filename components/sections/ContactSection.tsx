@@ -104,7 +104,7 @@ const ContactSection = () => {
         }`}
       >
         <h1 className="text-[16vw] md:text-[12vw] leading-none font-bold tracking-tighter">
-          Weboin
+          Pixor
           <span className="text-gray-500 font-normal text-[6vw] md:text-[4vw] align-top">
             ®
           </span>

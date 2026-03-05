@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="w-full bg-[#0a0a0a] text-white py-2 px-5 md:px-10 ">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-3xl font-black tracking-tighter">
-          WEBOIN
+          Pixor
           <span className="text-gray-500 text-lg font-normal align-top ml-1">
             ®
           </span>
@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
 
         <div className="text-xs md:text-sm text-gray-600 font-medium">
-          &copy; {currentYear} Weboin. All rights reserved.
+          &copy; {currentYear} Pixor. All rights reserved.
         </div>
       </div>
     </footer>

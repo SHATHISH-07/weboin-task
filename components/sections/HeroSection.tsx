@@ -199,7 +199,7 @@ const HeroSection = () => {
     >
       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 md:gap-8">
         <div className="text-5xl sm:text-7xl md:text-9xl lg:text-[15em] font-bold leading-none opacity-0 animate-fade-in-hero-txt tracking-tighter">
-          WEBOIN
+          PIXOR
         </div>
 
         <div className="max-w-xs sm:max-w-sm md:max-w-md pb-2 md:pb-6 text-left lg:text-right text-[#757575] font-bold opacity-0 animate-fade-in-hero-para text-sm md:text-base">
