@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PIXOR — Modern Design Agency Landing Page
 
-## Getting Started
+PIXOR is a modern **design agency landing page** built with **Next.js, React, TypeScript, and Tailwind CSS**.
+It showcases services, portfolio work, hero storytelling, and a contact form with smooth animations and a fully responsive layout.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Features
+
+### Modern Hero Section
+
+- Large brand typography
+- Animated text reveal
+- Scroll-based storytelling
+- Video showreel preview
+
+### Services Section
+
+- Interactive service cards
+- Hover expansion animation
+- Image background transitions
+
+### Portfolio Section
+
+- Responsive grid layout
+- Hover effects
+- Project showcase cards
+
+### Contact Section
+
+- Client-side validated contact form
+- Success feedback message
+- Smooth stagger animations
+
+### Fully Responsive
+
+Optimized for:
+
+- Mobile
+- Tablet
+- Desktop
+- Large screens
+
+### Smooth UI Animations
+
+- Scroll-triggered animations
+- Word-by-word text animations
+- Staggered component reveals
+- Hover interactions
+
+---
+
+# Tech Stack
+
+**Frontend**
+
+- Next.js
+- React
+- TypeScript
+
+**Styling**
+
+- Tailwind CSS
+
+**UI / Animation**
+
+- CSS animations
+- Intersection Observer
+- Tailwind transitions
+
+---
+
+# Project Structure
+
+```
+app/
+ ├─ page.tsx
+ ├─ layout.tsx
+ |- globals.css
+
+components/
+ ├─ sections/
+ │   ├─ HeroSection.tsx
+ │   ├─ ServiceSection.tsx
+ │   ├─ PortfolioSection.tsx
+ │   ├─ ContactSection.tsx
+
+public/
+ ├─ portfolioImg/
+ ├─ servicesImg/
+ ├─ HeroVideo.mp4
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# ⚙️ Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Clone the repository:
 
-## Learn More
+```
+git clone https://github.com/yourusername/pixor-agency-site.git
+```
 
-To learn more about Next.js, take a look at the following resources:
+Navigate to the project folder:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+cd pixor-agency-site
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Install dependencies:
 
-## Deploy on Vercel
+```
+npm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+npm run dev
+```
+
+Open in your browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+# Main Sections
+
+### Hero Section
+
+Introduces the brand with bold typography and animated storytelling.
+
+### Services Section
+
+Highlights the core offerings:
+
+- UI/UX Design
+- Web Design
+- Branding
+- Marketing
+
+### Portfolio Section
+
+Displays featured projects in a modern responsive grid.
+
+### Contact Section
+
+Allows visitors to send project inquiries through a validated form.
+
+---

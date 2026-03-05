@@ -14,7 +14,7 @@ const NavSection = () => {
 
   return (
     <>
-      <nav className="sticky top-0 w-full z-50 flex items-center justify-between p-4 md:p-3 md:px-8  backdrop-blur-md bg-white/0 opacity-0 animate-fade-in-nav">
+      <nav className="sticky top-0 w-full z-50 flex items-center justify-between p-4 md:p-3 md:px-8 backdrop-blur-md bg-white/0 opacity-0 animate-fade-in-nav">
         <h1 className="relative z-50 text-2xl md:text-3xl font-extrabold transition-colors duration-300 ease-in-out">
           <a href="#home">Pixor</a>
         </h1>
@@ -53,7 +53,7 @@ const NavSection = () => {
             <a
               href="#home"
               onClick={toggleMenu}
-              className="text-4xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
+              className="text-black text-4xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
             >
               Home
             </a>
@@ -62,7 +62,7 @@ const NavSection = () => {
             <a
               href="#services"
               onClick={toggleMenu}
-              className="text-3xl font-bold  transition-colors duration-300 md:text-6xl hover:text-gray-600"
+              className="text-black text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
             >
               Services
             </a>
@@ -71,7 +71,7 @@ const NavSection = () => {
             <a
               href="#portfolio"
               onClick={toggleMenu}
-              className="text-3xl font-bold  transition-colors duration-300 md:text-6xl hover:text-gray-600"
+              className="text-black text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
             >
               Work
             </a>
@@ -80,13 +80,13 @@ const NavSection = () => {
             <a
               href="#contact"
               onClick={toggleMenu}
-              className="text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
+              className="text-black text-3xl font-bold transition-colors duration-300 md:text-6xl hover:text-gray-600"
             >
               Contact
             </a>
           </li>
         </ul>
-        <span>&copy; {year} Pixor</span>
+        <span className="text-black font-medium mt-8">&copy; {year} Pixor</span>
       </div>
     </>
   );
