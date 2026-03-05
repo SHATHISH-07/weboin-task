@@ -9,25 +9,25 @@ const ServiceSection = () => {
       id: "01",
       title: "UI/UX Design",
       desc: "Crafting intuitive and engaging user interfaces.",
-      image: "/uiux.jpg",
+      image: "/servicesImg/uiux.jpg",
     },
     {
       id: "02",
       title: "Web Design",
       desc: "Building robust, scalable digital solutions.",
-      image: "/webdesign.jpg",
+      image: "/servicesImg/webdesign.jpg",
     },
     {
       id: "03",
       title: "Branding",
       desc: "Forging memorable and lasting brand identities.",
-      image: "/branding.jpg",
+      image: "/servicesImg/branding.jpg",
     },
     {
       id: "04",
       title: "Marketing",
       desc: "Driving unprecedented growth and brand reach.",
-      image: "/digitalmarketing.jpg",
+      image: "/servicesImg/digitalmarketing.jpg",
     },
   ];
 
@@ -73,7 +73,6 @@ const ServiceSection = () => {
 
   return (
     <section className="w-full p-5 flex flex-col gap-8 md:gap-12 mt-5">
-      {/* TITLE */}
       <div
         ref={titleRef}
         className={`transition-all duration-1000 ${
@@ -89,7 +88,6 @@ const ServiceSection = () => {
         </h2>
       </div>
 
-      {/* SERVICE CARDS */}
       <div
         ref={cardRef}
         className={`w-full h-150 md:h-125 flex flex-col md:flex-row rounded-3xl shadow-2xl bg-black overflow-hidden transition-all duration-1000 ${
