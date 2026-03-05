@@ -1,5 +1,5 @@
 const ContactSection = () => {
-  return <div>ContactSection</div>;
+  return <div className="bg-black">ContactSection</div>;
 };
 
 export default ContactSection;

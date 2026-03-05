@@ -16,7 +16,7 @@ const NavSection = () => {
     <>
       <nav className="sticky top-0 w-full z-50 flex items-center justify-between p-4 md:p-3 md:px-8  backdrop-blur-md bg-white/0 opacity-0 animate-fade-in-nav">
         <h1 className="relative z-50 text-2xl md:text-3xl font-extrabold transition-colors duration-300 ease-in-out">
-          Weboin
+          <a href="#home">Weboin</a>
         </h1>
 
         <button
@@ -60,20 +60,20 @@ const NavSection = () => {
           </li>
           <li className="my-6">
             <a
-              href="#about"
-              onClick={toggleMenu}
-              className="text-3xl font-bold  transition-colors duration-300 md:text-6xl hover:text-gray-600"
-            >
-              About
-            </a>
-          </li>
-          <li className="my-6">
-            <a
               href="#services"
               onClick={toggleMenu}
               className="text-3xl font-bold  transition-colors duration-300 md:text-6xl hover:text-gray-600"
             >
               Services
+            </a>
+          </li>
+          <li className="my-6">
+            <a
+              href="#portfolio"
+              onClick={toggleMenu}
+              className="text-3xl font-bold  transition-colors duration-300 md:text-6xl hover:text-gray-600"
+            >
+              Portfolio
             </a>
           </li>
           <li className="my-6">

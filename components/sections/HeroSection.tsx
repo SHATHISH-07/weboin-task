@@ -191,7 +191,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen p-4 sm:p-5 md:mt-10 flex flex-col gap-10 md:gap-12">
+    <div
+      id="home"
+      className="min-h-screen p-4 sm:p-5 md:mt-10 flex flex-col gap-10 md:gap-12"
+    >
       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 md:gap-8">
         <div className="text-5xl sm:text-7xl md:text-9xl lg:text-[15em] font-bold leading-none opacity-0 animate-fade-in-hero-txt tracking-tighter">
           WEBOIN

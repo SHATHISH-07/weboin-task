@@ -72,7 +72,7 @@ const ServiceSection = () => {
   const words = sentence.split(" ");
 
   return (
-    <section className="w-full p-5 flex flex-col gap-8 md:gap-12">
+    <section id="services" className="w-full p-5 flex flex-col gap-8 md:gap-12">
       <div
         ref={titleRef}
         className={`transition-all duration-1000 ${
