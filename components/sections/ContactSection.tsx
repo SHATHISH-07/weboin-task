@@ -97,6 +97,7 @@ const ContactSection = () => {
       id="contact"
       className="w-full bg-[#0a0a0a] dark:bg-white text-white dark:text-black py-12 px-5 md:px-10 rounded-t-3xl mt-10"
     >
+      {/* Company Logo */}
       <div
         className={`w-full border-b border-neutral-800 pb-6 mb-8 transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
@@ -110,6 +111,7 @@ const ContactSection = () => {
         </h1>
       </div>
 
+      {/* Contact Form */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         <div className="flex flex-col gap-6">
           <p

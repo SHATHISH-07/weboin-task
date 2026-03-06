@@ -197,6 +197,7 @@ const HeroSection = () => {
       id="home"
       className="min-h-screen p-4 sm:p-5 mt-24 md:mt-22 flex flex-col gap-10 md:gap-12"
     >
+      {/* Top Section Company Name and Tagline */}
       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 md:gap-8">
         <div className="text-5xl sm:text-7xl md:text-9xl lg:text-[15em] font-bold leading-none opacity-0 animate-fade-in-hero-txt tracking-tighter">
           PIXOR
@@ -208,6 +209,7 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Marquee */}
       <div className="flex flex-col md:flex-row items-center w-full max-w-full border-y border-gray-300 py-2 gap-4 md:gap-8 opacity-0 animate-fade-in-marquee">
         <div className="relative flex flex-1 w-full min-w-0 overflow-hidden">
           <div className="flex whitespace-nowrap animate-marquee items-center pl-4 md:pl-10">
@@ -236,6 +238,7 @@ const HeroSection = () => {
           </div>
         </div>
 
+        {/* Trusted Section Part */}
         <div className="shrink-0 pr-2 md:pr-8 text-right md:border-l border-gray-200 pl-4 md:pl-8">
           <div className="text-lg sm:text-xl md:text-2xl font-black text-black dark:text-white">
             <span className="text-xs sm:text-sm">★ ★ ★ ★ ☆ </span>4.9/5
@@ -246,6 +249,7 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Reel */}
       <div
         ref={containerRef}
         className="relative w-full md:h-[300vh] mb-10 opacity-0 animate-fade-in-reel"
@@ -290,6 +294,7 @@ const HeroSection = () => {
             })}
           </div>
 
+          {/* Mobile Version - Stacked Passages */}
           <div className="md:hidden relative w-full flex flex-col items-center justify-center text-center py-10 px-4 z-10">
             <div className="mb-6 bg-black dark:bg-white rounded-2xl text-white dark:text-black font-bold tracking-normal p-3 px-5 w-fit mx-auto text-sm sm:text-base">
               We don&apos;t just build websites.
@@ -311,21 +316,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-100%); }
-        }
-        .animate-marquee {
-          animation: marquee 40s linear infinite;
-          flex-shrink: 0; 
-        }
-      `,
-        }}
-      />
     </div>
   );
 };

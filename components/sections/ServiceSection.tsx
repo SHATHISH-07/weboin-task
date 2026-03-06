@@ -73,6 +73,7 @@ const ServiceSection = () => {
 
   return (
     <section id="services" className="w-full p-5 flex flex-col gap-8 md:gap-12">
+      {/* title and description */}
       <div
         ref={titleRef}
         className={`transition-all duration-1000 ${
@@ -88,6 +89,7 @@ const ServiceSection = () => {
         </h2>
       </div>
 
+      {/* cards */}
       <div
         ref={cardRef}
         className={`w-full h-150 md:h-125 flex flex-col md:flex-row rounded-3xl shadow-2xl bg-black overflow-hidden transition-all duration-1000 ${
