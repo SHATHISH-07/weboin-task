@@ -95,7 +95,7 @@ const ContactSection = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="w-full bg-[#0a0a0a] md:h-[89.5vh] dark:bg-white text-white dark:text-black py-12 px-5 md:px-10 rounded-t-3xl mt-10"
+      className="w-full bg-[#0a0a0a] md:h-[90vh] dark:bg-white text-white dark:text-black py-12 px-5 md:px-10 rounded-t-3xl mt-10"
     >
       {/* Company Logo */}
       <div
@@ -105,9 +105,6 @@ const ContactSection = () => {
       >
         <h1 className="text-[16vw] md:text-[11vw] leading-none font-bold tracking-tighter">
           Pixor
-          <span className="text-gray-500 dark:text-gray-900 font-normal text-[6vw] md:text-[4vw] align-top">
-            ®
-          </span>
         </h1>
       </div>
 
