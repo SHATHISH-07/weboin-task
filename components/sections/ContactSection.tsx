@@ -95,7 +95,7 @@ const ContactSection = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="w-full bg-[#0a0a0a] dark:bg-white text-white dark:text-black py-12 px-5 md:px-10 rounded-t-3xl mt-10"
+      className="w-full bg-[#0a0a0a] md:h-[89.5vh] dark:bg-white text-white dark:text-black py-12 px-5 md:px-10 rounded-t-3xl mt-10"
     >
       {/* Company Logo */}
       <div
@@ -103,7 +103,7 @@ const ContactSection = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}
       >
-        <h1 className="text-[16vw] md:text-[12vw] leading-none font-bold tracking-tighter">
+        <h1 className="text-[16vw] md:text-[11vw] leading-none font-bold tracking-tighter">
           Pixor
           <span className="text-gray-500 dark:text-gray-900 font-normal text-[6vw] md:text-[4vw] align-top">
             ®
@@ -165,7 +165,7 @@ const ContactSection = () => {
             Drop us a line
           </h3>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-2">
             <input
               type="text"
               name="name"
