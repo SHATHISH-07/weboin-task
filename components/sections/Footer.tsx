@@ -11,7 +11,7 @@ const Footer = () => {
           </span>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-medium text-gray-400">
+        <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-medium text-gray-400 dark:text-gray-800">
           <a
             href="#home"
             className="hover:text-white dark:hover:text-gray-700 transition-colors duration-300"
