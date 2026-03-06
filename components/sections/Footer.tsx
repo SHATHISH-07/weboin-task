@@ -14,25 +14,25 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-medium text-gray-400">
           <a
             href="#home"
-            className="hover:text-white transition-colors duration-300"
+            className="hover:text-white dark:hover:text-gray-700 transition-colors duration-300"
           >
             Home
           </a>
           <a
             href="#services"
-            className="hover:text-white transition-colors duration-300"
+            className="hover:text-white dark:hover:text-gray-700 transition-colors duration-300"
           >
             Services
           </a>
           <a
             href="#portfolio"
-            className="hover:text-white transition-colors duration-300"
+            className="hover:text-white dark:hover:text-gray-700 transition-colors duration-300"
           >
             Work
           </a>
           <a
             href="#contact"
-            className="hover:text-white transition-colors duration-300"
+            className="hover:text-white dark:hover:text-gray-700 transition-colors duration-300"
           >
             Contact
           </a>
