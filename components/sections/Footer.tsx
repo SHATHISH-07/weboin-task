@@ -2,7 +2,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#0a0a0a] text-white py-2 px-5 md:px-10 ">
+    <footer className="w-full bg-[#0a0a0a] dark:bg-white text-white dark:text-black py-2 px-5 md:px-10 ">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-3xl font-black tracking-tighter">
           Pixor
